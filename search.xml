@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>testunity</title>
+      <link href="/testunity/"/>
+      <url>/testunity/</url>
+      
+        <content type="html"><![CDATA[<p><a href="../csharp/testcsharp.html">jump2csharp</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mac 安装 Node.js</title>
+      <link href="/Mac%E5%AE%89%E8%A3%85nodejs/"/>
+      <url>/Mac%E5%AE%89%E8%A3%85nodejs/</url>
+      
+        <content type="html"><![CDATA[<ul><li>brew 简介<br>brew 又叫 <strong>Homebrew</strong>，是 Mac OSX 上的软件包管理工具，能在 Mac 中方便的安装软件或者卸载软件， 只需要一个命令， 非常方便。</li></ul><span id="more"></span><ul><li><p>安装brew<br>brew 的官方网站： <a href="http://brew.sh/">http://brew.sh/</a>   在官方网站对brew的用法进行了详细的描述</p></li><li><p>安装方法：<br>在 Mac 中打开 Termal 并输入命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)” </span><br></pre></td></tr></table></figure><p>注：此链接可能会根据官网变动</p></li><li><p>使用 brew 安装软件举例</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 安装 git</span><br><span class="line">brew install git</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 安装 wget</span><br><span class="line">brew install wget</span><br></pre></td></tr></table></figure></li><li><p>使用 brew 卸载软件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall wget</span><br></pre></td></tr></table></figure></li><li><p>使用 brew 查询软件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew search /wge*/</span><br></pre></td></tr></table></figure><p>&#x2F;wge*&#x2F;是个正则表达式， 需要包含在&#x2F;中</p></li><li><p>其他 brew 命令</p><table><thead><tr><th>commond</th><th>description</th></tr></thead><tbody><tr><td>brew list</td><td>列出已安装的软件</td></tr><tr><td>brew update</td><td>更新brew</td></tr><tr><td>brew home</td><td>用浏览器打开brew的官方网站</td></tr><tr><td>brew info</td><td>显示软件信息</td></tr><tr><td>brew deps</td><td>显示包依赖</td></tr></tbody></table></li><li><p>通过 NVM 安装指定版本的 node</p><ul><li><p>安装 NVM（前提是你安装了homebrew）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ brew install nvm</span><br></pre></td></tr></table></figure></li><li><p>在 shell 中可以使用 nvm 命令，如果没有 .bash_profile 文件需要自行 touch .bash_profile</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~ </span><br><span class="line">$ vim .bash_profile </span><br></pre></td></tr></table></figure></li><li><p>i 键进入编辑模式，在最后另起一行添加以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=~/.nvm</span><br><span class="line">source $(brew --prefix nvm)/nvm.sh</span><br></pre></td></tr></table></figure></li><li><p>esc 退出编辑模式</p></li><li><p>:wq! 退出并保存修改</p></li><li><p>重新 source</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source .bash_profile</span><br></pre></td></tr></table></figure></li></ul></li><li><p>使用nvm安装node</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls-remote 联网查看 所有的node可用版本</span><br><span class="line"></span><br><span class="line">$ nvm install xxx 下载你想要的版本</span><br><span class="line"></span><br><span class="line">$ nvm use xxx 使用指定版本的node </span><br><span class="line"></span><br><span class="line">$ nvm alias default xxx 每次启动终端都使用该版本的node </span><br></pre></td></tr></table></figure></li><li><p>完成安装，执行以下命令确认是否安装成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Homebrew </tag>
+            
+            <tag> Node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
