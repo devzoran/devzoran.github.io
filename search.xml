@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>ET TODO LIST</title>
+      <link href="/ET-TODO-LIST/"/>
+      <url>/ET-TODO-LIST/</url>
+      
+        <content type="html"><![CDATA[<h3 id="基于FGUI的UI管理器"><a href="#基于FGUI的UI管理器" class="headerlink" title="基于FGUI的UI管理器"></a>基于FGUI的UI管理器</h3><h3 id="游戏主界面"><a href="#游戏主界面" class="headerlink" title="游戏主界面"></a>游戏主界面</h3><h3 id="AOT流程研究总结"><a href="#AOT流程研究总结" class="headerlink" title="AOT流程研究总结"></a>AOT流程研究总结</h3><h3 id="集成Spine动画"><a href="#集成Spine动画" class="headerlink" title="集成Spine动画"></a>集成Spine动画</h3><h3 id="回合制战斗框架"><a href="#回合制战斗框架" class="headerlink" title="回合制战斗框架"></a>回合制战斗框架</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> ET </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mac安装Homebrew</title>
       <link href="/Mac%E5%AE%89%E8%A3%85Homebrew/"/>
       <url>/Mac%E5%AE%89%E8%A3%85Homebrew/</url>
