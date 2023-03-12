@@ -28,13 +28,13 @@
 <meta property="og:site_name" content="Zoran&#39;s Blog">
 <meta property="og:description" content="JITJIT，即Just-in-time,动态(即时)编译，边运行边编译   JIT 的优点 可以根据当前硬件情况实时编译生成最优机器指令（ps. AOT也可以做到，在用户使用时使用字节码根据机器情况再做一次编译） 可以根据当前程序的运行情况生成最优的机器指令序列 当程序需要支持动态链接时，只能使用JIT 可以根据进程中内存的实际情况调整代码，使内存能够更充分的利用   JIT 的缺点 编译需要占">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://devzoran.github.io/.io//MONOVM.jpg">
+<meta property="og:image" content="https://monovm.jpg/">
 <meta property="article:published_time" content="2023-03-11T17:12:10.000Z">
-<meta property="article:modified_time" content="2023-03-12T16:02:29.408Z">
+<meta property="article:modified_time" content="2023-03-12T16:06:19.491Z">
 <meta property="article:author" content="Zoran">
 <meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://devzoran.github.io/.io//MONOVM.jpg">
+<meta name="twitter:image" content="https://monovm.jpg/">
 
 <link rel="canonical" href="https://devzoran.github.io/Unity%E4%B8%AD%E7%9A%84AOT%E5%92%8CJIT/">
 
@@ -217,7 +217,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-13 00:02:29" itemprop="dateModified" datetime="2023-03-13T00:02:29+08:00">2023-03-13</time>
+                <time title="Modified: 2023-03-13 00:06:19" itemprop="dateModified" datetime="2023-03-13T00:06:19+08:00">2023-03-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -274,7 +274,7 @@
 </li>
 </ul>
 <h1 id="与Unity的关联"><a href="#与Unity的关联" class="headerlink" title="与Unity的关联"></a>与Unity的关联</h1><ul>
-<li>JIT &amp; Mono 编译<br>Unity 的跨平台技术是通过一个 Mono 虚拟机实现的。而这个虚拟机更新太慢，不能很好地适应众多的平台。<br><img src="/.io//MONOVM.jpg"></li>
+<li>JIT &amp; Mono 编译<br>Unity 的跨平台技术是通过一个 Mono 虚拟机实现的。而这个虚拟机更新太慢，不能很好地适应众多的平台。<br><img src="//MONOVM.jpg"></li>
 <li>AOT &amp; IL2CPP编译<br>unity 公司因为 Mono 的缺点自行研发了 IL2cpp，把本来应该在 mono 虚拟机上跑的中间代码转换成 cpp 代码，再利用 c++ 的跨平台特性(在各个平台上通过对各平台都有良好优化的 native c++ 编译器编译)，以获得更高的效率和更好的兼容性。</li>
 </ul>
 
