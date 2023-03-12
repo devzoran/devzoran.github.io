@@ -29,25 +29,6 @@
     
     
     <entry>
-      <title>testunity</title>
-      <link href="/testunity/"/>
-      <url>/testunity/</url>
-      
-        <content type="html"><![CDATA[<p><a href="../csharp/testcsharp.html">jump2csharp</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Unity </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Mac 安装 Node.js</title>
       <link href="/Mac%E5%AE%89%E8%A3%85nodejs/"/>
       <url>/Mac%E5%AE%89%E8%A3%85nodejs/</url>
