@@ -18,21 +18,19 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"devzoran.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Talking is cheap, show me the code.">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Zoran&#39;s Blog">
-<meta property="og:url" content="http://example.com/">
+<meta property="og:url" content="https://devzoran.github.io/">
 <meta property="og:site_name" content="Zoran&#39;s Blog">
-<meta property="og:description" content="Talking is cheap, show me the code.">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Zoran">
 <meta property="article:tag" content="Unity">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="https://devzoran.github.io/">
 
 
 <script id="page-configurations">
@@ -113,33 +111,23 @@
 
 <nav class="site-nav">
   <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-et">
+        <li class="menu-item menu-item-categories">
 
-    <a href="/et/" rel="section">ET 7.0</a>
-
-  </li>
-        <li class="menu-item menu-item-unity">
-
-    <a href="/unity/Unity.md" rel="section">Unity</a>
-
-  </li>
-        <li class="menu-item menu-item-csharp">
-
-    <a href="/csharp/" rel="section">C#</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section">Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section">About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger">Search
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -192,12 +180,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/testunity/">
+    <link itemprop="mainEntityOfPage" href="https://devzoran.github.io/Unity%E4%B8%AD%E7%9A%84AOT%E5%92%8CJIT/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Zoran">
-      <meta itemprop="description" content="Talking is cheap, show me the code.">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zoran's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Unity%E4%B8%AD%E7%9A%84AOT%E5%92%8CJIT/" class="post-title-link" itemprop="url">Unity中的AOT和JIT</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-03-12 01:12:10" itemprop="dateCreated datePublished" datetime="2023-03-12T01:12:10+08:00">2023-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-13 00:02:29" itemprop="dateModified" datetime="2023-03-13T00:02:29+08:00">2023-03-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unity/" itemprop="url" rel="index"><span itemprop="name">Unity</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JIT"><a href="#JIT" class="headerlink" title="JIT"></a>JIT</h1><pre><code>JIT，即Just-in-time,动态(即时)编译，边运行边编译
+</code></pre>
+<ul>
+<li>JIT 的优点<ul>
+<li>可以根据当前硬件情况实时编译生成最优机器指令（ps. AOT也可以做到，在用户使用时使用字节码根据机器情况再做一次编译）</li>
+<li>可以根据当前程序的运行情况生成最优的机器指令序列</li>
+<li>当程序需要支持动态链接时，只能使用JIT</li>
+<li>可以根据进程中内存的实际情况调整代码，使内存能够更充分的利用</li>
+</ul>
+</li>
+<li>JIT 的缺点<ul>
+<li>编译需要占用运行时资源，会导致进程卡顿</li>
+<li>由于编译时间需要占用运行时间，对于某些代码的编译优化不能完全支持，需要在程序流畅和编译时间之间做权衡</li>
+<li>在编译准备和识别频繁使用的方法需要占用时间，使得初始编译不能达到最高性能</li>
+</ul>
+</li>
+</ul>
+<h1 id="AOT"><a href="#AOT" class="headerlink" title="AOT"></a>AOT</h1><pre><code>Ahead Of Time，指运行前编译，是两种程序的编译方式
+</code></pre>
+<ul>
+<li>AOT 的优点<ul>
+<li>在程序运行前编译，可以避免在运行时的编译性能消耗和内存消耗</li>
+<li>可以在程序运行初期就达到最高性能</li>
+<li>可以显著的加快程序的启动</li>
+</ul>
+</li>
+<li>AOT 的缺点<ul>
+<li>在程序运行前编译会使程序安装的时间增加</li>
+<li>牺牲语言的一致性</li>
+<li>将提前编译的内容保存会占用更多的外存</li>
+</ul>
+</li>
+</ul>
+<h1 id="与Unity的关联"><a href="#与Unity的关联" class="headerlink" title="与Unity的关联"></a>与Unity的关联</h1><ul>
+<li>JIT &amp; Mono 编译<br>Unity 的跨平台技术是通过一个 Mono 虚拟机实现的。而这个虚拟机更新太慢，不能很好地适应众多的平台。<br><img src="/.io//MONOVM.jpg"></li>
+<li>AOT &amp; IL2CPP编译<br>unity 公司因为 Mono 的缺点自行研发了 IL2cpp，把本来应该在 mono 虚拟机上跑的中间代码转换成 cpp 代码，再利用 c++ 的跨平台特性(在各个平台上通过对各平台都有良好优化的 native c++ 编译器编译)，以获得更高的效率和更好的兼容性。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://devzoran.github.io/testunity/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zoran">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -257,12 +355,12 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Mac%E5%AE%89%E8%A3%85nodejs/">
+    <link itemprop="mainEntityOfPage" href="https://devzoran.github.io/Mac%E5%AE%89%E8%A3%85nodejs/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Zoran">
-      <meta itemprop="description" content="Talking is cheap, show me the code.">
+      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -288,8 +386,21 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-12 01:04:44" itemprop="dateModified" datetime="2023-03-12T01:04:44+08:00">2023-03-12</time>
+                <time title="Modified: 2023-03-12 22:49:45" itemprop="dateModified" datetime="2023-03-12T22:49:45+08:00">2023-03-12</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Homebrew/" itemprop="url" rel="index"><span itemprop="name">Homebrew</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+                </span>
+            </span>
 
           
 
@@ -384,15 +495,21 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Zoran</p>
-  <div class="site-description" itemprop="description">Talking is cheap, show me the code.</div>
+  <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
