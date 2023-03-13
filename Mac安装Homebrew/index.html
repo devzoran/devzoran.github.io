@@ -12,13 +12,13 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Tahoma:300,300italic,400,400italic,700,700italic|Courier New:300,300italic,400,400italic,700,700italic|Palatino:300,300italic,400,400italic,700,700italic|Garamond:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"devzoran.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"devzoran.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":true,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="brew 简介">
@@ -28,8 +28,8 @@
 <meta property="og:site_name" content="Zoran&#39;s Blog">
 <meta property="og:description" content="brew 简介">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-03-12T17:04:57.000Z">
-<meta property="article:modified_time" content="2023-03-12T17:10:08.075Z">
+<meta property="article:published_time" content="2023-03-10T17:46:52.000Z">
+<meta property="article:modified_time" content="2023-03-13T15:55:09.650Z">
 <meta property="article:author" content="Zoran">
 <meta property="article:tag" content="Homebrew">
 <meta name="twitter:card" content="summary">
@@ -207,10 +207,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-03-13 01:04:57 / Modified: 01:10:08" itemprop="dateCreated datePublished" datetime="2023-03-13T01:04:57+08:00">2023-03-13</time>
+              <time title="Created: 2023-03-11 01:46:52" itemprop="dateCreated datePublished" datetime="2023-03-11T01:46:52+08:00">2023-03-11</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-03-13 23:55:09" itemprop="dateModified" datetime="2023-03-13T23:55:09+08:00">2023-03-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -232,11 +238,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="brew-简介"><a href="#brew-简介" class="headerlink" title="brew 简介"></a>brew 简介</h1><span id="more"></span>
+        <h4 id="brew-简介"><a href="#brew-简介" class="headerlink" title="brew 简介"></a>brew 简介</h4><span id="more"></span>
 <p>  brew 又叫 <strong>Homebrew</strong>，是 Mac OSX 上的软件包管理工具，能在 Mac 中方便的安装软件或者卸载软件， 只需要一个命令， 非常方便。</p>
-<h1 id="安装-brew"><a href="#安装-brew" class="headerlink" title="安装 brew"></a>安装 brew</h1><p>  brew 的官方网站： <a target="_blank" rel="noopener" href="http://brew.sh/">http://brew.sh/</a>   在官方网站对brew的用法进行了详细的描述</p>
-<h1 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h1><p>  在 Mac 中打开 Termal 并输入命令：<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)” </span><br></pre></td></tr></table></figure><br>  注：此链接可能会根据官网变动</p>
-<h1 id="使用-brew-安装软件举例"><a href="#使用-brew-安装软件举例" class="headerlink" title="使用 brew 安装软件举例"></a>使用 brew 安装软件举例</h1>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 安装 git</span><br><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<h4 id="安装-brew"><a href="#安装-brew" class="headerlink" title="安装 brew"></a>安装 brew</h4><p>  brew 的官方网站： <span class="exturl" data-url="aHR0cDovL2JyZXcuc2gv">http://brew.sh/<i class="fa fa-external-link-alt"></i></span>   在官方网站对brew的用法进行了详细的描述</p>
+<h4 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h4><p>  在 Mac 中打开 Termal 并输入命令：<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)” </span><br></pre></td></tr></table></figure><br>  注：此链接可能会根据官网变动</p>
+<h4 id="使用-brew-安装软件举例"><a href="#使用-brew-安装软件举例" class="headerlink" title="使用 brew 安装软件举例"></a>使用 brew 安装软件举例</h4>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 安装 git</span><br><span class="line">brew install git</span><br></pre></td></tr></table></figure>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 安装 wget</span><br><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
 
 <h1 id="使用-brew-卸载软件"><a href="#使用-brew-卸载软件" class="headerlink" title="使用 brew 卸载软件"></a>使用 brew 卸载软件</h1>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall wget</span><br></pre></td></tr></table></figure>
@@ -288,13 +294,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/Unity%E4%B8%AD%E7%9A%84AOT%E5%92%8CJIT/" rel="prev" title="Unity中的AOT和JIT">
-      <i class="fa fa-chevron-left"></i> Unity中的AOT和JIT
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/ET-TODO-LIST/" rel="next" title="ET TODO LIST">
-      ET TODO LIST <i class="fa fa-chevron-right"></i>
+    <a href="/Mac%E5%AE%89%E8%A3%85nodejs/" rel="next" title="Mac 安装 Node.js">
+      Mac 安装 Node.js <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -354,7 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#brew-%E7%AE%80%E4%BB%8B"><span class="nav-text">brew 简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-brew"><span class="nav-text">安装 brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">安装方法：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E4%B8%BE%E4%BE%8B"><span class="nav-text">使用 brew 安装软件举例</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6"><span class="nav-text">使用 brew 卸载软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E6%9F%A5%E8%AF%A2%E8%BD%AF%E4%BB%B6"><span class="nav-text">使用 brew 查询软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96-brew-%E5%91%BD%E4%BB%A4"><span class="nav-text">其他 brew 命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#brew-%E7%AE%80%E4%BB%8B"><span class="nav-text">brew 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-brew"><span class="nav-text">安装 brew</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="nav-text">安装方法：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E4%B8%BE%E4%BE%8B"><span class="nav-text">使用 brew 安装软件举例</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6"><span class="nav-text">使用 brew 卸载软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-brew-%E6%9F%A5%E8%AF%A2%E8%BD%AF%E4%BB%B6"><span class="nav-text">使用 brew 查询软件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96-brew-%E5%91%BD%E4%BB%A4"><span class="nav-text">其他 brew 命令</span></a></div>
       </div>
       <!--/noindex-->
 
