@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ET-Spine插件</title>
+      <link href="/ET-Spine%E6%8F%92%E4%BB%B6/"/>
+      <url>/ET-Spine%E6%8F%92%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p><a href="http://zh.esotericsoftware.com/spine-unity-download#spine-unity-4.1">【Spine-Unity官网插件安装引导教程】</a> </p><blockquote><p>这里用的是spine-unity 4.1</p></blockquote><h5 id="三种实例化skeleton的方法为"><a href="#三种实例化skeleton的方法为" class="headerlink" title="三种实例化skeleton的方法为:"></a>三种实例化skeleton的方法为:</h5><ul><li>SkeletonAnimation: 使用Spine定制的动画和事件系统, 提供最高的可定制性. 渲染使用的是 MeshRenderer, 可以像Unity sprite一样与 SpriteMask 等遮罩进行交互. 在Unity中推荐以这种方式使用Spine skeleton.</li><li>SkeletonGraphic (UI): 与Unity Canvas一起作为UI元素使用. 像内置的Unity UI元素一样渲染并与UI遮罩(如 RectMask2D )交互. 动画和事件行为与 SkeletonAnimation相同.</li><li>SkeletonRenderer: 使用Unity的Mecanim动画和事件系统来启动、mix和过渡动画. 与SkeletonAnimation相比,提供的动画mix和过渡选项较少.当使用 SkeletonMecanim 时, 无法保证动画过渡看起来和Spine Editor中的预览一致.</li></ul><br><h5 id="记录导入插件后demo报错相关处理方式"><a href="#记录导入插件后demo报错相关处理方式" class="headerlink" title="记录导入插件后demo报错相关处理方式"></a>记录导入插件后demo报错相关处理方式</h5><ul><li>Premultiplied Alpha<br><img src="/ET-Spine%E6%8F%92%E4%BB%B6/premultiplied-alpha-export-import.png?40" alt="premultiplied-alpha-export-import"><ul><li>Texture 打包器启用 Premultiply alpha ,</li><li>Unity Texture 设置中禁用 sRGB (Color Texture) 和 Alpha Is Transparency ,</li><li>Unity Material 参数中禁用 Straight Alpha Texture .</li></ul></li><li>Straight Alpha<br><img src="/ET-Spine%E6%8F%92%E4%BB%B6/straight-alpha-export-import.png?40" alt="straight-alpha-export-import"><ul><li>Texture 打包器禁用 Premultiply alpha , 启用 Bleed ,</li><li>Unity Texture 设置启用 sRGB (Color Texture) 和 Alpha Is Transparency ,</li><li>Unity Material 参数中启用 Straight Alpha Texture .</li></ul></li></ul><br><h5 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h5><ul><li><p>Texture 打包器的默认设置是使用 Premultiply alpha. 运行时中的所有Spine着色器也都默认使用 Premultiply alpha 工作流, 其 Straight Alpha Texture 参数都是默认禁用的.</p></li><li><p>在某些情况下你可能需要使用straight alpha工作流. 比如:</p><ul><li>当你使用了 线性色彩空间, 那么就 必须使用straight alpha.</li></ul></li><li><p>在导出时, Spine是在Gamma色彩空间中进行premultiplication的, 因此在导入时转换为线性色彩空间时将导致色彩超限. 当在material里检测到这种设置组合时, 控制台会给你一个警告消息.</p></li><li><p>当你想使用非Spine着色器时.</p><ul><li>一般的着色器默认用于straight alpha的texture, 这将导致图像附件周围出现错误的黑色边框.</li><li>在切换到straight alpha工作流时, 请确保对所有textures和materials进行如上配置. 你可以通过 Project Settings - Player - Other Settings - Color Space来检查或修改当前的颜色空间.</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ET </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ET </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ET-EventSystem</title>
       <link href="/ET-EventSystem/"/>
       <url>/ET-EventSystem/</url>

@@ -22,17 +22,20 @@
   </script>
 
   <meta property="og:type" content="article">
-<meta property="og:title" content="ET-启动流程">
-<meta property="og:url" content="https://devzoran.github.io/ET-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/">
+<meta property="og:title" content="ET-Spine插件">
+<meta property="og:url" content="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/">
 <meta property="og:site_name" content="Zoran&#39;s Blog">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-03-13T18:09:45.000Z">
-<meta property="article:modified_time" content="2023-03-13T18:51:52.062Z">
+<meta property="og:image" content="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/premultiplied-alpha-export-import.png?40">
+<meta property="og:image" content="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/straight-alpha-export-import.png?40">
+<meta property="article:published_time" content="2023-03-17T16:48:14.000Z">
+<meta property="article:modified_time" content="2023-03-17T17:14:58.622Z">
 <meta property="article:author" content="Zoran">
 <meta property="article:tag" content="ET">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/premultiplied-alpha-export-import.png?40">
 
-<link rel="canonical" href="https://devzoran.github.io/ET-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/">
+<link rel="canonical" href="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/">
 
 
 <script id="page-configurations">
@@ -45,7 +48,7 @@
   };
 </script>
 
-  <title>ET-启动流程 | Zoran's Blog</title>
+  <title>ET-Spine插件 | Zoran's Blog</title>
   
 
 
@@ -183,7 +186,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://devzoran.github.io/ET-%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="https://devzoran.github.io/ET-Spine%E6%8F%92%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -196,7 +199,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ET-启动流程
+          ET-Spine插件
         </h1>
 
         <div class="post-meta">
@@ -207,7 +210,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-03-14 02:09:45 / Modified: 02:51:52" itemprop="dateCreated datePublished" datetime="2023-03-14T02:09:45+08:00">2023-03-14</time>
+              <time title="Created: 2023-03-18 00:48:14 / Modified: 01:14:58" itemprop="dateCreated datePublished" datetime="2023-03-18T00:48:14+08:00">2023-03-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,44 +234,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li><p>Init.cs</p>
-<ul>
-<li>Start生命周期<blockquote>
-<p>Game部分单例对象的初始化</p>
+        <p><a target="_blank" rel="noopener" href="http://zh.esotericsoftware.com/spine-unity-download#spine-unity-4.1">【Spine-Unity官网插件安装引导教程】</a> </p>
+<blockquote>
+<p>这里用的是spine-unity 4.1</p>
 </blockquote>
-<ul>
-<li>新增了YooAsset的资源系统初始化流程，代码如下：<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Game.AddSingleton&lt;MonoResComponent&gt;().InitAsync(() =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    Game.AddSingleton&lt;CodeLoader&gt;().Start();</span><br><span class="line">&#125;).Coroutine();</span><br></pre></td></tr></table></figure>
-资源初始化结束后，再执行CodeLoader.cs中的AOT流程<ul>
-<li><a href="../ET-%E8%B5%84%E6%BA%90%E7%B3%BB%E7%BB%9F/">关于MonoResComponent</a></li>
-<li><a href="../ET-%E7%83%AD%E9%87%8D%E8%BD%BD/">关于CodeLoader</a></li>
+<h5 id="三种实例化skeleton的方法为"><a href="#三种实例化skeleton的方法为" class="headerlink" title="三种实例化skeleton的方法为:"></a>三种实例化skeleton的方法为:</h5><ul>
+<li>SkeletonAnimation: 使用Spine定制的动画和事件系统, 提供最高的可定制性. 渲染使用的是 MeshRenderer, 可以像Unity sprite一样与 SpriteMask 等遮罩进行交互. 在Unity中推荐以这种方式使用Spine skeleton.</li>
+<li>SkeletonGraphic (UI): 与Unity Canvas一起作为UI元素使用. 像内置的Unity UI元素一样渲染并与UI遮罩(如 RectMask2D )交互. 动画和事件行为与 SkeletonAnimation相同.</li>
+<li>SkeletonRenderer: 使用Unity的Mecanim动画和事件系统来启动、mix和过渡动画. 与SkeletonAnimation相比,提供的动画mix和过渡选项较少.当使用 SkeletonMecanim 时, 无法保证动画过渡看起来和Spine Editor中的预览一致.</li>
+</ul>
+<br>
+
+<h5 id="记录导入插件后demo报错相关处理方式"><a href="#记录导入插件后demo报错相关处理方式" class="headerlink" title="记录导入插件后demo报错相关处理方式"></a>记录导入插件后demo报错相关处理方式</h5><ul>
+<li>Premultiplied Alpha<br><img src="/ET-Spine%E6%8F%92%E4%BB%B6/premultiplied-alpha-export-import.png?40" alt="premultiplied-alpha-export-import"><ul>
+<li>Texture 打包器启用 Premultiply alpha ,</li>
+<li>Unity Texture 设置中禁用 sRGB (Color Texture) 和 Alpha Is Transparency ,</li>
+<li>Unity Material 参数中禁用 Straight Alpha Texture .</li>
 </ul>
 </li>
+<li>Straight Alpha<br><img src="/ET-Spine%E6%8F%92%E4%BB%B6/straight-alpha-export-import.png?40" alt="straight-alpha-export-import"><ul>
+<li>Texture 打包器禁用 Premultiply alpha , 启用 Bleed ,</li>
+<li>Unity Texture 设置启用 sRGB (Color Texture) 和 Alpha Is Transparency ,</li>
+<li>Unity Material 参数中启用 Straight Alpha Texture .</li>
 </ul>
 </li>
 </ul>
 <br>
 
+<h5 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h5><ul>
+<li><p>Texture 打包器的默认设置是使用 Premultiply alpha. 运行时中的所有Spine着色器也都默认使用 Premultiply alpha 工作流, 其 Straight Alpha Texture 参数都是默认禁用的.</p>
+</li>
+<li><p>在某些情况下你可能需要使用straight alpha工作流. 比如:</p>
 <ul>
-<li>Update生命周期<blockquote>
-<p>Game中Update流程</p>
-</blockquote>
-<ul>
-<li><a href>关于Game.Update()</a></li>
+<li>当你使用了 线性色彩空间, 那么就 必须使用straight alpha.</li>
 </ul>
 </li>
-</ul>
-<br>
-
-<ul>
-<li>LateUpdate生命周期<blockquote>
-<p>Game中的LateUpdate流程和FrameFinishUpdate流程</p>
-</blockquote>
-<ul>
-<li><a href>关于Game.LateUpdate()</a></li>
-<li><a href>关于Game.FrameFinishUpdate()</a></li>
-</ul>
+<li><p>在导出时, Spine是在Gamma色彩空间中进行premultiplication的, 因此在导入时转换为线性色彩空间时将导致色彩超限. 当在material里检测到这种设置组合时, 控制台会给你一个警告消息.</p>
 </li>
+<li><p>当你想使用非Spine着色器时.</p>
+<ul>
+<li>一般的着色器默认用于straight alpha的texture, 这将导致图像附件周围出现错误的黑色边框.</li>
+<li>在切换到straight alpha工作流时, 请确保对所有textures和materials进行如上配置. 你可以通过 Project Settings - Player - Other Settings - Color Space来检查或修改当前的颜色空间.</li>
 </ul>
 </li>
 </ul>
@@ -290,13 +296,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/ET-TODO-LIST/" rel="prev" title="ET TODO LIST">
-      <i class="fa fa-chevron-left"></i> ET TODO LIST
+    <a href="/ET-EventSystem/" rel="prev" title="ET-EventSystem">
+      <i class="fa fa-chevron-left"></i> ET-EventSystem
     </a></div>
-      <div class="post-nav-item">
-    <a href="/ET-%E8%B5%84%E6%BA%90%E7%B3%BB%E7%BB%9F/" rel="next" title="ET-资源系统">
-      ET-资源系统 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -355,6 +358,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%89%E7%A7%8D%E5%AE%9E%E4%BE%8B%E5%8C%96skeleton%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%BA"><span class="nav-text">三种实例化skeleton的方法为:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E5%AF%BC%E5%85%A5%E6%8F%92%E4%BB%B6%E5%90%8Edemo%E6%8A%A5%E9%94%99%E7%9B%B8%E5%85%B3%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-text">记录导入插件后demo报错相关处理方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TIPS"><span class="nav-text">TIPS</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
