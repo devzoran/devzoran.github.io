@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ET-FairyGUI</title>
+      <link href="/ET-FairyGUI/"/>
+      <url>/ET-FairyGUI/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>FairyGUI 导出后，Unity 是从哪边触发脚本 AutoGen 的？</p></li><li><p>同一个pkg下，如果有多个Panel，PanelId自动生成的枚举只能生成一个？</p></li><li><p>FairyGUI 编辑器中，只发布自己当前编辑点 pkg，如果点击发布全部，会导致工程中触发的FUIAutoGen把所有FUI相关的文件都进行修改</p></li><li><p>FairyGUI编辑器中发布完后，Unity触发脚本FUICodeSpawner.FUICodeSpawn()</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> ET </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ET </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ET-Spine插件</title>
       <link href="/ET-Spine%E6%8F%92%E4%BB%B6/"/>
       <url>/ET-Spine%E6%8F%92%E4%BB%B6/</url>
